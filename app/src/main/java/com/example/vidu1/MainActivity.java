@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    public void sayHello(View v){
+    public void cong(View v){
         EditText soThuNhat = findViewById(R.id.edtNumber1);
         EditText soThuHai = findViewById(R.id.edtNumber2);
         //Lấy dữ liệu bằng getter
@@ -36,8 +36,61 @@ public class MainActivity extends AppCompatActivity {
         //Tính toán
         int tong = num1 + num2;
         //Xuất chuyển từ int sang string
-        String chuoiXuat= "Tổng là: " + String.valueOf(tong);
+        String chuoiXuat= "Tổng 2 số là: " + String.valueOf(tong);
 
+        Toast.makeText(this, chuoiXuat, Toast.LENGTH_SHORT).show();
+    }
+    public void hieu(View v){
+        EditText soThuNhat = findViewById(R.id.edtNumber1);
+        EditText soThuHai = findViewById(R.id.edtNumber2);
+        //Lấy dữ liệu bằng getter
+        String s1 = soThuNhat.getText().toString();
+        String s2 = soThuHai.getText().toString();
+        //Chuyển kiểu
+        int num1 = Integer.parseInt(s1);
+        int num2 = Integer.parseInt(s2);
+        //Tính toán
+        int hieu = num1 - num2;
+        //Xuất chuyển từ int sang string
+        String chuoiXuat= "Hiệu 2 số là: " + String.valueOf(hieu);
+
+        Toast.makeText(this, chuoiXuat, Toast.LENGTH_SHORT).show();
+    }
+    public void nhan(View v){
+        EditText soThuNhat = findViewById(R.id.edtNumber1);
+        EditText soThuHai = findViewById(R.id.edtNumber2);
+        //Lấy dữ liệu bằng getter
+        String s1 = soThuNhat.getText().toString();
+        String s2 = soThuHai.getText().toString();
+        //Chuyển kiểu
+        int num1 = Integer.parseInt(s1);
+        int num2 = Integer.parseInt(s2);
+        //Tính toán
+        int tich = num1 * num2;
+        //Xuất chuyển từ int sang string
+        String chuoiXuat= "Tích 2 số là: " + String.valueOf(tich);
+
+        Toast.makeText(this, chuoiXuat, Toast.LENGTH_SHORT).show();
+    }
+    public void chia(View v){
+        String chuoiXuat;
+        EditText soThuNhat = findViewById(R.id.edtNumber1);
+        EditText soThuHai = findViewById(R.id.edtNumber2);
+        //Lấy dữ liệu bằng getter
+        String s1 = soThuNhat.getText().toString();
+        String s2 = soThuHai.getText().toString();
+        //Chuyển kiểu
+        int num1 = Integer.parseInt(s1);
+        int num2 = Integer.parseInt(s2);
+        if(num2 == 0){
+            chuoiXuat = "Phép chia không hợp lệ";
+        }
+        else {
+            //Tính toán
+            float thuong = (float)num1 / num2;
+            //Xuất chuyển từ int sang string
+            chuoiXuat= "Thương 2 số là: " + String.valueOf(thuong);
+        }
         Toast.makeText(this, chuoiXuat, Toast.LENGTH_SHORT).show();
     }
 }
