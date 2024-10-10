@@ -22,5 +22,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.example.vidu1", appContext.getPackageName());
+        assertEquals("com.example.vidu2", appContext.getPackageName());
     }
 }
