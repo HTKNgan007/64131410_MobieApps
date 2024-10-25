@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity2">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="162dp"
-        android:layout_height="63dp"
-        android:layout_marginTop="132dp"
-        android:onClick="ChuyenSangManHinh2"
-        android:text="Sang màn hình 2"
+        android:id="@+id/button2"
+        android:layout_width="149dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="164dp"
+        android:onClick="ChuyVeManHinhChinh"
+        android:text="Chuyển về màn hình chính"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
