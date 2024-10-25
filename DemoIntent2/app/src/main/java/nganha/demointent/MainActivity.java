@@ -1,4 +1,4 @@
-package com.example.demointent;
+package nganha.demointent;
 
 import android.os.Bundle;
 
@@ -21,5 +21,4 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-    public  void
 }
