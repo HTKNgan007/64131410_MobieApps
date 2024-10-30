@@ -1,8 +1,6 @@
-package nganha.demointent;
+package nganha.recyclerviewexample;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -17,16 +15,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-    }
-
-    public void ChuyenSangManHinh2(View v){
-        //1. tao intent
-        Intent iNH2 = new Intent(MainActivity.this, MainActivity2.class);
-
-        //2. goi du lieu
-//        iNH2.putExtra("ten", "Ngan Ha");
-
-        //3. chuyen man hinh
-        startActivity(iNH2);
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
+            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
+            return insets;
+        });
     }
 }

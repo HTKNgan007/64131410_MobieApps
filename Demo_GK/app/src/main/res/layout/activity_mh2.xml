@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/profile_image_background"
+    android:gravity="center">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center"
+        android:contentDescription="Avatar của bạn"
+        android:scaleType="centerCrop"
+        android:src="@drawable/avatar" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hà Thị Kiều Ngân"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/lop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="64.CNTT-CLC2"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:gravity="center"/>
+
+    <!-- Mô tả ngắn về bản thân -->
+    <TextView
+        android:id="@+id/bio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tôi là sinh viên năm 3 \nNgành Công Nghệ Thông Tin \n Đang theo học tại Đại học Nha Trang"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Điện thoại: 0704958317 \n Email: nganha2004nh@gmail.com \nĐịa chỉ: Tây Nam, Vĩnh Hải, Nha Trang"
+        android:textSize="16sp"
+        android:textColor="#666666"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Nút kết nối (ví dụ: Email hoặc LinkedIn) -->
+    <Button
+        android:id="@+id/fb_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:onClick="openFacebookPage"
+        android:text="Facebook" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:onClick="QuayVeManHinhChinh"
+        android:text="Quay về màn hình chính" />
+
+</LinearLayout>
