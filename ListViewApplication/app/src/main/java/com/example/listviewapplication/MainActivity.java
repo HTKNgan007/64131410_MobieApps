@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnThemBT;
     EditText edtTenBaiTho;
     ArrayAdapter<String> adapterBaiTho;
+
     void getControl(){
         lvBaiTho = findViewById(R.id.lvBT);
         btnThemBT = findViewById(R.id.btnThem);
