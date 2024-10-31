@@ -19,9 +19,6 @@ public class MH3Activity extends AppCompatActivity {
         setContentView(R.layout.activity_mh3);
     }
     public void QuayVeManHinhChinh(View v){
-        // Lay du lieu ve
-        Intent iNhan = getIntent();
-
         // Chuyen ve man hinh chinh
         Intent iNHChinh = new Intent(MH3Activity.this, MainActivity.class);
         startActivity(iNHChinh);
