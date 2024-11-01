@@ -11,6 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
         android:orientation="vertical">
 
         <LinearLayout
@@ -38,8 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@color/light_gray"
-                android:textColor="@color/black"
+                android:backgroundTint="@color/Firebrick"
                 android:text="Thêm" />
 
         </LinearLayout>
@@ -64,8 +64,7 @@
             android:id="@+id/button7"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/light_gray"
-            android:textColor="@color/black"
+            android:backgroundTint="@color/Firebrick"
             android:text="Quay lại màn hình chính"
             android:onClick="QuayVeManHinhChinh"/>
 

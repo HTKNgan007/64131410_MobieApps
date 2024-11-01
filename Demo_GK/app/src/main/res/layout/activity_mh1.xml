@@ -14,7 +14,7 @@
         android:background="#80BD9E"
         android:gravity="center"
         android:text="BMI APP"
-        android:textColor="#fff"
+        android:textColor="@color/white"
         android:textSize="30dp" />
 
     <TextView
@@ -67,9 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:backgroundTint="@color/light_gray"
-        android:text="CALCULATE BMI"
-        android:textColor="@color/black" />
+        android:backgroundTint="@color/Firebrick"
+        android:text="CALCULATE BMI" />
 
     <Button
         android:id="@+id/button5"
@@ -77,8 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="QuayVeManHinhChinh"
-        android:backgroundTint="@color/light_gray"
-        android:textColor="@color/black"
+        android:backgroundTint="@color/Firebrick"
         android:text="Quay về màn hình chính" />
 
 </LinearLayout>

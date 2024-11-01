@@ -68,8 +68,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:onClick="openFacebookPage"
-        android:backgroundTint="@color/light_gray"
-        android:textColor="@color/black"
+        android:backgroundTint="@color/Firebrick"
         android:text="Facebook" />
 
     <Button
@@ -78,8 +77,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:onClick="QuayVeManHinhChinh"
-        android:backgroundTint="@color/light_gray"
-        android:textColor="@color/black"
+        android:backgroundTint="@color/Firebrick"
         android:text="Quay về màn hình chính" />
 
 </LinearLayout>
