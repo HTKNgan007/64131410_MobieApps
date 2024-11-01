@@ -3,6 +3,7 @@ package nganha.demogk;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -43,8 +44,20 @@ public class MH4Activity extends AppCompatActivity {
         userList.add(u3);
 
         // Tạo adapter và gán vào RecyclerView
-        myAdapter = new MyAdapter(userList);
+//        myAdapter = new MyAdapter(userList);
+//        recyclerView.setAdapter(myAdapter);
+        // Tạo adapter và gán vào RecyclerView với OnItemClickListener
+        myAdapter = new MyAdapter(userList, user -> {
+            // Hiển thị thông tin người dùng khi click
+            showUserInfo(user);
+        });
         recyclerView.setAdapter(myAdapter);
+    }
+
+    // Phương thức hiển thị thông tin người dùng
+    private void showUserInfo(User user) {
+        // Sử dụng Toast để hiển thị thông tin
+        Toast.makeText(this, "Name: " + user.getName() + "\nInfo: " + user.getInfo(), Toast.LENGTH_SHORT).show();
     }
 
     public void QuayVeManHinhChinh(View v){

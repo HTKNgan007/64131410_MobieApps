@@ -13,9 +13,11 @@ import java.util.List;
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
     private List<User> userList;
+    private OnItemClickListener listener;
 
-    public MyAdapter(List<User> userList) {
+    public MyAdapter(List<User> userList, OnItemClickListener listener) {
         this.userList = userList;
+        this.listener = listener;
     }
 
     @NonNull
@@ -31,6 +33,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         holder.nameTextView.setText(user.getName());
         holder.infoTextView.setText(user.getInfo());
         holder.avatarImageView.setImageResource(user.getAvatarResId()); // sử dụng tài nguyên ảnh
+
+        // Thiết lập sự kiện click
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(user);
+            }
+        });
     }
 
     @Override
@@ -51,3 +60,4 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyViewHolder> {
         }
     }
 }
+

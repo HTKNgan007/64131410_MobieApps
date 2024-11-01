@@ -1,12 +1,10 @@
 package nganha.recyclerviewexample;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -34,7 +32,19 @@ public class MainActivity extends AppCompatActivity {
         userList.add(new User("Jukain Mega", "Hệ cỏ", R.drawable.jukain_mega));
 
         // Tạo adapter và gán vào RecyclerView
-        myAdapter = new MyAdapter(userList);
+//        myAdapter = new MyAdapter(userList);
+//        recyclerView.setAdapter(myAdapter);
+        // Tạo adapter và gán vào RecyclerView với OnItemClickListener
+        myAdapter = new MyAdapter(userList, user -> {
+            // Hiển thị thông tin người dùng khi click
+            showUserInfo(user);
+        });
         recyclerView.setAdapter(myAdapter);
+    }
+
+    // Phương thức hiển thị thông tin người dùng
+    private void showUserInfo(User user) {
+        // Sử dụng Toast để hiển thị thông tin
+        Toast.makeText(this, "Name: " + user.getName() + "\nInfo: " + user.getInfo(), Toast.LENGTH_SHORT).show();
     }
 }
