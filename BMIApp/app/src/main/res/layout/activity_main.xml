@@ -29,8 +29,8 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:layout_gravity="center"
-        android:gravity="center"
         android:drawableLeft="@drawable/weight_scale_solid"
+        android:drawablePadding="10dp"
         android:inputType="numberDecimal" />
 
     <TextView
@@ -48,7 +48,7 @@
         android:ems="10"
         android:layout_gravity="center"
         android:drawableLeft="@drawable/person_solid"
-        android:gravity="center"
+        android:drawablePadding="10dp"
         android:inputType="numberDecimal"/>
 
     <Button
