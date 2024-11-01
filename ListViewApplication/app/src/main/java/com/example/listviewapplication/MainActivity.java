@@ -52,7 +52,6 @@ public class MainActivity extends AppCompatActivity {
         });
         getControl();
         dsBaiTho = getData();
-        ArrayAdapter<String> adapterBaiTho;
         adapterBaiTho = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, dsBaiTho);
         lvBaiTho.setAdapter(adapterBaiTho);
         lvBaiTho.setOnItemClickListener(new AdapterView.OnItemClickListener() {

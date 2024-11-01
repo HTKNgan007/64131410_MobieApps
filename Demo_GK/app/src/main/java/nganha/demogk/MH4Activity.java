@@ -38,6 +38,9 @@ public class MH4Activity extends AppCompatActivity {
         userList.add(u1);
         userList.add(u2);
         userList.add(u3);
+        userList.add(u1);
+        userList.add(u2);
+        userList.add(u3);
 
         // Tạo adapter và gán vào RecyclerView
         myAdapter = new MyAdapter(userList);
