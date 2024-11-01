@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="@drawable/profile_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80BD9E"
+        android:gravity="center"
+        android:text="BMI APP"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:text="Weight" />
+
+    <EditText
+        android:id="@+id/editTextNumber"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/weight_scale_solid"
+        android:drawablePadding="10dp"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:text="Height" />
+
+    <EditText
+        android:id="@+id/editTextNumber2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:drawableLeft="@drawable/person_solid"
+        android:drawablePadding="10dp"
+        android:inputType="numberDecimal"
+        android:padding="10dp" />
+
+    <TextView
+        android:id="@+id/tvKq"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Chỉ số BMI của bạn"
+        android:textSize="20sp"
+        android:gravity="center" />
+
+    <Button
+        android:id="@+id/btnBMI"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/Firebrick"
+        android:text="CALCULATE BMI"
+        android:textColor="@android:color/white"
+        android:padding="10dp" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:onClick="QuayVeManHinhChinh"
+        android:backgroundTint="@color/Firebrick"
+        android:text="Quay về màn hình chính"
+        android:textColor="@android:color/white"
+        android:padding="10dp" />
+
+</LinearLayout>

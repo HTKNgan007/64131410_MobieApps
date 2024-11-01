@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background"
+    tools:context=".activityBai2">
+
+    <!-- Title TextView -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="ListView"
+        android:background="#80BD9E"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- ScrollView chứa ListView -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:scrollbarStyle="insideInset"
+        android:scrollbars="vertical"
+        app:layout_constraintBottom_toTopOf="@id/button7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+        <ListView
+
+        android:id="@+id/rssListView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:dividerHeight="1dp"
+        android:divider="@android:color/darker_gray"
+        android:padding="8dp"
+        android:background="@android:color/transparent"
+        />
+
+    </ScrollView>
+
+    <!-- Button Quay về màn hình chính -->
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Quay về màn hình chính"
+        android:onClick="QuayVeManHinhChinh"
+        android:backgroundTint="@color/Firebrick"
+        android:textColor="@android:color/white"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

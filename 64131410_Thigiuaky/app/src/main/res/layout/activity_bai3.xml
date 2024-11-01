@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_background"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tiêu đề -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#80BD9E"
+        android:gravity="center"
+        android:text="RecyclerView"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:elevation="4dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- RecyclerView hiển thị danh sách -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="8dp"
+        android:scrollbars="vertical" />
+
+    <!-- Nút quay về màn hình chính -->
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#B22222"
+        android:text="Quay về màn hình chính"
+        android:textSize="18sp"
+        android:padding="12dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="QuayVeManHinhChinh"
+        android:elevation="2dp"
+        />
+
+</LinearLayout>

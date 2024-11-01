@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/profile_background"
+    android:padding="16dp">
+
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:scaleType="centerCrop" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/infoTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/button8"
+        android:onClick="QuayLaiBai3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Firebrick"
+        android:text="Quay Lại" />
+</LinearLayout>
