@@ -4,11 +4,19 @@
     android:layout_height="match_parent"
     android:background="@drawable/profile_background"
     android:orientation="vertical">
-
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="409dp"
+        android:layout_height="59dp"
+        android:background="#80BD9E"
+        android:gravity="center"
+        android:text="RecycleView"
+        android:textColor="@color/white"
+        android:textSize="30sp" />
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="680dp" />
+        android:layout_height="630dp" />
 
     <Button
         android:id="@+id/button6"

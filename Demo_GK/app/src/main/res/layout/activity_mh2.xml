@@ -61,7 +61,7 @@
         android:gravity="center"
         android:layout_marginTop="8dp"/>
 
-    <!-- Nút kết nối (ví dụ: Email hoặc LinkedIn) -->
+    <!-- Nút kết nối FaceBook -->
     <Button
         android:id="@+id/fb_button"
         android:layout_width="wrap_content"
@@ -70,7 +70,7 @@
         android:onClick="openFacebookPage"
         android:backgroundTint="@color/Firebrick"
         android:text="Facebook" />
-
+    <!-- Nút quay về màn hình chính  -->
     <Button
         android:id="@+id/button"
         android:layout_width="wrap_content"
