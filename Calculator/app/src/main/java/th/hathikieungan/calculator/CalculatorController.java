@@ -2,25 +2,20 @@ package th.hathikieungan.calculator;
 
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 public class CalculatorController {
     private EditText soA, soB;
     private TextView ketQua;
-    private String phepToan = "+";
+    private RadioGroup radioGroupPhepToan;
 
-    public CalculatorController(EditText soA, EditText soB, TextView ketQua) {
+    public CalculatorController(EditText soA, EditText soB, TextView ketQua, RadioGroup radioGroupPhepToan) {
         this.soA = soA;
         this.soB = soB;
         this.ketQua = ketQua;
-    }
-
-    // Đặt sự kiện cho các nút phép toán
-    public void datSuKienChoNut(Button nutCong, Button nutTru, Button nutNhan, Button nutChia) {
-        nutCong.setOnClickListener(v -> phepToan = "+");
-        nutTru.setOnClickListener(v -> phepToan = "-");
-        nutNhan.setOnClickListener(v -> phepToan = "*");
-        nutChia.setOnClickListener(v -> phepToan = "/");
+        this.radioGroupPhepToan = radioGroupPhepToan;
     }
 
     // Đặt sự kiện cho nút "Tính toán"
@@ -37,11 +32,18 @@ public class CalculatorController {
             try {
                 double giaTriA = Double.parseDouble(chuoiSoA);
                 double giaTriB = Double.parseDouble(chuoiSoB);
-                double ketQuaTinhToan = thucHienTinhToan(giaTriA, giaTriB, phepToan);
 
-                // Tạo chuỗi mô tả kết quả
-                String chuoiKetQua = String.format("Kết quả của phép tính %.2f %s %.2f là: %.2f", giaTriA, phepToan, giaTriB, ketQuaTinhToan);
-                ketQua.setText(chuoiKetQua);
+                // Xác định phép toán được chọn
+                int selectedId = radioGroupPhepToan.getCheckedRadioButtonId();
+                String phepToan = "+"; // Mặc định là phép cộng
+                if (selectedId != -1) {
+                    RadioButton radioButton = radioGroupPhepToan.findViewById(selectedId);
+                    phepToan = radioButton.getText().toString();
+                }
+
+                // Tính toán và hiển thị kết quả
+                double ketQuaTinhToan = thucHienTinhToan(giaTriA, giaTriB, phepToan);
+                ketQua.setText("Kết quả: " + giaTriA + " " + phepToan + " " + giaTriB + " = " + ketQuaTinhToan);
             } catch (NumberFormatException e) {
                 ketQua.setText("Số nhập vào không hợp lệ!");
             } catch (ArithmeticException e) {
@@ -52,16 +54,15 @@ public class CalculatorController {
         });
     }
 
-    // Logic tính toán
     private double thucHienTinhToan(double a, double b, String phepToan) throws ArithmeticException {
         switch (phepToan) {
             case "+":
                 return a + b;
             case "-":
                 return a - b;
-            case "*":
+            case "×": // Sử dụng ký tự "×" cho phép nhân
                 return a * b;
-            case "/":
+            case "÷": // Sử dụng ký tự "÷" cho phép chia
                 if (b == 0) {
                     throw new ArithmeticException("Không thể chia cho 0!");
                 }

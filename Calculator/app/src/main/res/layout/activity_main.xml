@@ -1,98 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
+    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
 
     <!-- Ô nhập số A -->
-    <EditText
-        android:id="@+id/edtSoA"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutSoA"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nhập số A"
-        android:inputType="numberDecimal"
-        android:background="@drawable/input_background"
-        android:padding="12dp"
-        android:textSize="16sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="16dp">
+
+        <EditText
+            android:id="@+id/edtSoA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số A"
+            android:inputType="numberDecimal"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:importantForAccessibility="yes" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <!-- Ô nhập số B -->
-    <EditText
-        android:id="@+id/edtSoB"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputLayoutSoB"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="Nhập số B"
-        android:inputType="numberDecimal"
-        android:background="@drawable/input_background"
-        android:padding="12dp"
-        android:textSize="16sp"
-        app:layout_constraintTop_toBottomOf="@id/edtSoA"
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutSoA"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp">
 
-    <!-- Các nút chọn phép toán -->
-    <LinearLayout
-        android:id="@+id/layoutPhepToan"
-        android:layout_width="0dp"
+        <EditText
+            android:id="@+id/edtSoB"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nhập số B"
+            android:inputType="numberDecimal"
+            android:textColor="#333"
+            android:textSize="16sp"
+            android:importantForAccessibility="yes" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Nhóm chọn phép toán -->
+    <RadioGroup
+        android:id="@+id/radioGroupPhepToan"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
-        app:layout_constraintTop_toBottomOf="@id/edtSoB"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp">
+        app:layout_constraintTop_toBottomOf="@id/inputLayoutSoB"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp">
 
-        <Button
-            android:id="@+id/nutCong"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+        <RadioButton
+            android:id="@+id/radioCong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="+"
             android:textSize="18sp"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"
-            android:layout_margin="8dp" />
+            android:textColor="#4CAF50"
+            android:checked="true" />
 
-        <Button
-            android:id="@+id/nutTru"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+        <RadioButton
+            android:id="@+id/radioTru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="-"
             android:textSize="18sp"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"
-            android:layout_margin="8dp" />
+            android:textColor="#FF5722" />
 
-        <Button
-            android:id="@+id/nutNhan"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="*"
+        <RadioButton
+            android:id="@+id/radioNhan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="×"
             android:textSize="18sp"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"
-            android:layout_margin="8dp" />
+            android:textColor="#2196F3" />
 
-        <Button
-            android:id="@+id/nutChia"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:text="/"
+        <RadioButton
+            android:id="@+id/radioChia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="÷"
             android:textSize="18sp"
-            android:backgroundTint="@color/primary"
-            android:textColor="@color/white"
-            android:layout_margin="8dp" />
-    </LinearLayout>
+            android:textColor="#FF9800" />
+    </RadioGroup>
 
     <!-- Nút thực hiện tính toán -->
     <Button
@@ -100,16 +104,19 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Tính toán"
-        android:backgroundTint="@color/primaryDark"
-        android:textColor="@color/white"
-        android:padding="16dp"
         android:textSize="18sp"
-        app:layout_constraintTop_toBottomOf="@id/layoutPhepToan"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#3F51B5"
+        app:layout_constraintTop_toBottomOf="@id/radioGroupPhepToan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginTop="24dp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp"
+        android:importantForAccessibility="yes" />
 
     <!-- Hiển thị kết quả -->
     <TextView
@@ -117,16 +124,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Kết quả: "
-        android:gravity="center"
-        android:textColor="@color/primaryDark"
         android:textSize="20sp"
-        android:textStyle="bold"
-        android:background="@drawable/output_background"
-        android:padding="12dp"
+        android:textColor="#000000"
         app:layout_constraintTop_toBottomOf="@id/nutTinhToan"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="24dp"
         android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp" />
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
