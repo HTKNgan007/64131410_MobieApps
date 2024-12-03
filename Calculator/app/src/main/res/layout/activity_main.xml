@@ -2,18 +2,131 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <!-- Ô nhập số A -->
+    <EditText
+        android:id="@+id/edtSoA"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="Nhập số A"
+        android:inputType="numberDecimal"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="32dp" />
 
+    <!-- Ô nhập số B -->
+    <EditText
+        android:id="@+id/edtSoB"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Nhập số B"
+        android:inputType="numberDecimal"
+        android:background="@drawable/input_background"
+        android:padding="12dp"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/edtSoA"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp" />
+
+    <!-- Các nút chọn phép toán -->
+    <LinearLayout
+        android:id="@+id/layoutPhepToan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/edtSoB"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp">
+
+        <Button
+            android:id="@+id/nutCong"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="+"
+            android:textSize="18sp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/nutTru"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="-"
+            android:textSize="18sp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/nutNhan"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="*"
+            android:textSize="18sp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:layout_margin="8dp" />
+
+        <Button
+            android:id="@+id/nutChia"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="/"
+            android:textSize="18sp"
+            android:backgroundTint="@color/primary"
+            android:textColor="@color/white"
+            android:layout_margin="8dp" />
+    </LinearLayout>
+
+    <!-- Nút thực hiện tính toán -->
+    <Button
+        android:id="@+id/nutTinhToan"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tính toán"
+        android:backgroundTint="@color/primaryDark"
+        android:textColor="@color/white"
+        android:padding="16dp"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/layoutPhepToan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="24dp" />
+
+    <!-- Hiển thị kết quả -->
+    <TextView
+        android:id="@+id/txtKetQua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Kết quả: "
+        android:gravity="center"
+        android:textColor="@color/primaryDark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:background="@drawable/output_background"
+        android:padding="12dp"
+        app:layout_constraintTop_toBottomOf="@id/nutTinhToan"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
