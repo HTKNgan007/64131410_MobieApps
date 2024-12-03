@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#E3F2FD"
+    tools:context=".MainActivity">
+
+    <!-- Tiêu đề BMI -->
+    <TextView
+    android:id="@+id/textView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Chỉ số BMI"
+    android:textSize="32sp"
+    android:textStyle="bold"
+    android:textColor="@color/blue"
+    android:gravity="center"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
+    android:layout_marginTop="32dp" />
+
+    <!-- Card nhập dữ liệu -->
+    <androidx.cardview.widget.CardView
+    android:id="@+id/inputCard"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:padding="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="@color/blue_2"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/textView">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Label và Input Chiều cao -->
+    <TextView
+    android:id="@+id/heightLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Chiều cao (m):"
+    android:textSize="16sp"
+    android:textColor="#1E88E5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+    android:id="@+id/heightInput"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Nhập chiều cao"
+    android:inputType="numberDecimal"
+    android:background="@drawable/edittext_background"
+    android:padding="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/heightLabel"
+    app:layout_constraintTop_toBottomOf="@id/heightLabel"
+    android:layout_marginTop="8dp" />
+
+    <!-- Label và Input Cân nặng -->
+    <TextView
+    android:id="@+id/weightLabel"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Cân nặng (kg):"
+    android:textSize="16sp"
+    android:textColor="#1E88E5"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/heightInput"
+    android:layout_marginTop="16dp" />
+
+    <EditText
+    android:id="@+id/weightInput"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:hint="Nhập cân nặng"
+    android:inputType="numberDecimal"
+    android:background="@drawable/edittext_background"
+    android:padding="8dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="@id/weightLabel"
+    app:layout_constraintTop_toBottomOf="@id/weightLabel"
+    android:layout_marginTop="8dp" />
+
+    <CheckBox
+    android:id="@+id/asiaCheckbox"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Người Châu Á"
+    android:textSize="16sp"
+    android:textColor="#1E88E5"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/weightInput"
+    android:layout_marginTop="16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- Nút Tính BMI -->
+    <Button
+    android:id="@+id/calculateBtn"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Tính BMI"
+    android:backgroundTint="@color/blue"
+    android:textColor="#FFFFFF"
+    android:layout_marginTop="16dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/inputCard" />
+
+    <!-- Card hiển thị kết quả -->
+    <androidx.cardview.widget.CardView
+    android:id="@+id/resultCard"
+    android:layout_width="0dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:padding="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#E3F2FD"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/calculateBtn">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/bmiResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI: "
+        android:textSize="18sp"
+        android:textColor="#1E88E5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bmiEvaluation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đánh giá: "
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bmiResult"
+        android:layout_marginTop="8dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
