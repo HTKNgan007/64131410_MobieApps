@@ -7,40 +7,21 @@
     android:orientation="vertical"
     tools:context=".TiengAnhActivity">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentE1"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:background="@color/blue"
-        android:gravity="center"
-        android:text="Better English - Better Life"
-        android:textColor="@color/white"
-        android:textSize="25sp" />
+        android:layout_height="80dp">
+    </androidx.fragment.app.FragmentContainerView>
 
-    <fragment
-        android:id="@+id/fragment_container"
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentE2"
         android:layout_width="match_parent"
-        android:layout_height="600dp"
+        android:layout_height="670dp">
+    </androidx.fragment.app.FragmentContainerView>
 
-        />
-    <LinearLayout
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragmentE3"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:background="@color/blue"
-        android:gravity="center">
-        <Button
-            android:id="@+id/btn_prev"
-            android:layout_width="wrap_content"
-            android:text="Trai"
-            android:layout_height="wrap_content"/>
-
-        <Button
-            android:id="@+id/btn_next"
-            android:layout_width="wrap_content"
-            android:text="Phai"
-            android:layout_height="wrap_content"/>
-        </LinearLayout>
+        android:layout_height="90dp"></androidx.fragment.app.FragmentContainerView>
 
 </LinearLayout>

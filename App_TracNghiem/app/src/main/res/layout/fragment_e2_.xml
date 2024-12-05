@@ -5,10 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".E2_Fragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Cau 2" />
+        android:text="Quiz here"
+        android:textSize="40sp"
+        android:background="@color/bg_green"
+        android:gravity="center"
+        android:textColor="@color/red"/>
 
 </FrameLayout>

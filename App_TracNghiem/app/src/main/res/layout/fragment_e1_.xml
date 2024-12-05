@@ -6,8 +6,13 @@
     tools:context=".E1_Fragment">
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Cau1" />
+        android:background="@color/blue"
+        android:gravity="center"
+        android:text="Better English - Better Life"
+        android:textColor="@color/white"
+        android:textSize="25sp" />
 
 </FrameLayout>
