@@ -37,7 +37,7 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="@color/green"
         android:padding="12dp"
-        android:text="Button 2"
+        android:text="Toán"
         android:textColor="#FFF" />
 
     <Button

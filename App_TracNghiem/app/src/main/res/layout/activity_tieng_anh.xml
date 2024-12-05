@@ -16,12 +16,12 @@
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentE2"
         android:layout_width="match_parent"
-        android:layout_height="670dp">
-    </androidx.fragment.app.FragmentContainerView>
+        android:layout_height="650dp"></androidx.fragment.app.FragmentContainerView>
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentE3"
         android:layout_width="match_parent"
-        android:layout_height="90dp"></androidx.fragment.app.FragmentContainerView>
+        android:layout_height="100dp">
+    </androidx.fragment.app.FragmentContainerView>
 
 </LinearLayout>

@@ -25,7 +25,7 @@ public class TiengAnhActivity extends AppCompatActivity{
                 .replace(R.id.fragmentE2, fragment2)
                 .commit();
 
-        // Gắn Fragment 2 vào fragment_container2
+        // Gắn Fragment 3 vào fragment_container3s
         E3_Fragment fragment3 = new E3_Fragment();
         getSupportFragmentManager().beginTransaction()
                 .replace(R.id.fragmentE3, fragment3)

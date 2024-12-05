@@ -16,5 +16,17 @@ public class ToanActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_toan);
 
+        // Gắn Fragment 1 vào fragment_container1
+        T1_Fragment fragment1 = new T1_Fragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentT1, fragment1)
+                .commit();
+
+        // Gắn Fragment 2 vào fragment_container2
+        T2_Fragment fragment2 = new T2_Fragment();
+        getSupportFragmentManager().beginTransaction()
+                .replace(R.id.fragmentT2, fragment2)
+                .commit();
+
     }
 }
