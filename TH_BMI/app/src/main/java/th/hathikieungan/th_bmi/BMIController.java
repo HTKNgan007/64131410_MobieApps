@@ -1,7 +1,7 @@
 package th.hathikieungan.th_bmi;
 
 public class BMIController {
-    // Tính BMI
+    // Tính BMI 
     public float calculateBMI(String heightText, String weightText) {
         try {
             // Chuyển đổi dữ liệu từ String sang float
