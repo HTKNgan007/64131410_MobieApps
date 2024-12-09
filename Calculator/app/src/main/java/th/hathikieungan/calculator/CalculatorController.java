@@ -18,7 +18,7 @@ public class CalculatorController {
         this.radioGroupPhepToan = radioGroupPhepToan;
     }
 
-    // Đặt sự kiện cho nút "Tính toán"
+    // Đặt sự kiện cho nút "Tính toán" 
     public void datSuKienChoNutTinhToan(Button nutTinhToan) {
         nutTinhToan.setOnClickListener(v -> {
             String chuoiSoA = soA.getText().toString();
