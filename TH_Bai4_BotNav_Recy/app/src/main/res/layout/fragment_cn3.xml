@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginTop="40dp"
+    tools:context=".CN3Fragment">
+
+    <!-- Horizontal ScrollView chứa các TextView có thể kéo qua lại -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="380dp"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <!-- TextView 1 -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:background="#7abff8"
+                android:gravity="center"
+                android:text="Item 1"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+            <!-- TextView 2 -->
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="#7abff8"
+                android:gravity="center"
+                android:text="Item 2"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+
+            <!-- TextView 3 -->
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="230dp"
+                android:layout_height="230dp"
+                android:background="#7abff8"
+                android:gravity="center"
+                android:text="Item 3"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <!-- Các nút bên dưới -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#4472c4"
+            android:text="Nút 1" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_weight="1"
+            android:backgroundTint="#4472c4"
+            android:text="Nút 2" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_weight="1"
+            android:backgroundTint="#4472c4"
+            android:text="Nút 3" />
+    </LinearLayout>
+</LinearLayout>
