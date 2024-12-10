@@ -6,9 +6,10 @@ import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
 public class MainActivity extends AppCompatActivity {
-    private LinearLayout layoutC, layoutJava, layoutPython;
+    private CardView layoutC, layoutJava, layoutPython;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,7 +17,6 @@ public class MainActivity extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
 
-        // Ánh xạ LinearLayout
         layoutC = findViewById(R.id.layoutC);
         layoutJava = findViewById(R.id.layoutJava);
         layoutPython = findViewById(R.id.layoutPython);
