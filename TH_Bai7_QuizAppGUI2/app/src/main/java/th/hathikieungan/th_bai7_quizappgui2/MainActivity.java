@@ -1,6 +1,8 @@
 package th.hathikieungan.th_bai7_quizappgui2;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,10 +17,12 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        // Chuyển sang màn hình câu hỏi sau 5 giây
+        new Handler().postDelayed(() -> {
+            Intent intent = new Intent(MainActivity.this, QuestionActivity.class);
+            startActivity(intent);
+            finish();
+        }, 5000); // 5000ms = 5 giây
     }
 }
