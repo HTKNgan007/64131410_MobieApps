@@ -29,9 +29,9 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewQuestion"
-        android:layout_width="325dp"
-        android:layout_height="115dp"
-        android:layout_marginTop="280dp"
+        android:layout_width="350dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="270dp"
         android:outlineAmbientShadowColor="@color/purple"
         android:outlineSpotShadowColor="@color/purple"
         app:cardCornerRadius="16dp"
@@ -42,6 +42,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/textview1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
@@ -51,8 +52,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewA"
-        android:layout_width="325dp"
-        android:layout_height="57dp"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
         android:layout_marginTop="25dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
@@ -64,6 +65,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardViewQuestion">
 
         <TextView
+            android:id="@+id/anwserA"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -74,8 +76,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewB"
-        android:layout_width="325dp"
-        android:layout_height="57dp"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
         android:layout_marginTop="25dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
@@ -87,6 +89,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardViewA">
 
         <TextView
+            android:id="@+id/anwserB"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="20dp"
@@ -97,8 +100,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewC"
-        android:layout_width="325dp"
-        android:layout_height="57dp"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
         android:layout_marginTop="25dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
@@ -110,6 +113,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardViewB">
 
         <TextView
+            android:id="@+id/anwserC"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="20dp"
@@ -120,8 +124,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardViewD"
-        android:layout_width="325dp"
-        android:layout_height="57dp"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
         android:layout_marginTop="25dp"
         app:cardCornerRadius="16dp"
         app:cardElevation="8dp"
@@ -133,6 +137,7 @@
         app:layout_constraintTop_toBottomOf="@+id/cardViewC">
 
         <TextView
+            android:id="@+id/anwserD"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="20dp"
@@ -142,7 +147,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnnext"
         android:layout_width="134dp"
         android:layout_height="47dp"
         android:backgroundTint="@color/button_purple"
@@ -154,6 +159,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardViewD"
         app:layout_constraintVertical_bias="0.533" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
