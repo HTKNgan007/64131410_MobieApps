@@ -14,16 +14,17 @@
         android:layout_height="193dp"
         android:layout_marginTop="76dp"
         app:cardBackgroundColor="@color/card_bg_color"
-        android:outlineSpotShadowColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
         app:cardCornerRadius="30dp"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
         <TextView
             android:id="@+id/textview1"
-            android:layout_width="369dp"
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
             android:text="Question"
@@ -35,11 +36,12 @@
         android:id="@+id/cardViewA"
         android:layout_width="350dp"
         android:layout_height="65dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/card_bg_color"
-        android:outlineSpotShadowColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -51,7 +53,7 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:paddingLeft="20dp"
-            android:text="A"
+            android:text="Option"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
 
@@ -59,11 +61,13 @@
         android:id="@+id/cardViewB"
         android:layout_width="350dp"
         android:layout_height="65dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/card_bg_color"
-        android:outlineSpotShadowColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
+        android:backgroundTint="@color/green"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,7 +79,7 @@
             android:layout_height="match_parent"
             android:paddingLeft="20dp"
             android:gravity="center_vertical"
-            android:text="B"
+            android:text="Option"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
 
@@ -83,11 +87,12 @@
         android:id="@+id/cardViewC"
         android:layout_width="350dp"
         android:layout_height="65dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/card_bg_color"
-        android:outlineSpotShadowColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -99,7 +104,7 @@
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:paddingLeft="20dp"
-            android:text="C"
+            android:text="Option"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
 
@@ -107,11 +112,13 @@
         android:id="@+id/cardViewD"
         android:layout_width="350dp"
         android:layout_height="65dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         app:cardCornerRadius="16dp"
         app:cardBackgroundColor="@color/card_bg_color"
-        android:outlineSpotShadowColor="@color/black"
-        android:outlineAmbientShadowColor="@color/black"
+        android:backgroundTint="@color/red"
+        app:cardElevation="0dp"
+        app:cardUseCompatPadding="false"
+        app:cardPreventCornerOverlap="false"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.428"
         app:layout_constraintStart_toStartOf="parent"
@@ -123,23 +130,41 @@
             android:layout_height="match_parent"
             android:paddingLeft="20dp"
             android:gravity="center_vertical"
-            android:text="D"
+            android:text="Option"
             android:textSize="30sp" />
     </androidx.cardview.widget.CardView>
 
-    <Button
-        android:id="@+id/btnnext"
+
+    <TextView
+        android:id="@+id/tvKQ"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/card_bg_color"
+        android:layout_marginStart="143dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="142dp"
+        android:text="Wrong.."
+        android:textColor="@color/red"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardViewD" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnnext"
+        android:layout_width="176dp"
+        android:layout_height="41dp"
+        android:background="@drawable/gradient"
+        android:foregroundTint="@color/card_bg_color"
         android:text="Next"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardViewD"
-        app:layout_constraintVertical_bias="0.677" />
+        app:layout_constraintTop_toBottomOf="@+id/tvKQ"
+        app:layout_constraintVertical_bias="0.333" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
